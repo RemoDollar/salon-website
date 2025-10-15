@@ -1,0 +1,103 @@
+header {
+  background: $secondary-color;
+  color: $light-color;
+  padding: 15px 30px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 150px;
+        height: auto;
+        background: transparent;
+        border-radius: 5px;
+        mix-blend-mode: multiply;
+        
+    }
+
+    span {
+        font-size: 1.5rem;
+        color: $light-color;
+        font-weight: bold;
+    }
+   }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+
+      a {
+        color: $light-color;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background: url('/images/cut1.jpeg') center/cover no-repeat;
+  color: $light-color;
+  text-align: center;
+  padding: 280px 60px;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+    margin: 10px 0 20px;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background: $primary-color;
+    color: $secondary-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $primary-color; // e.g. gold or accent color
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+}
+

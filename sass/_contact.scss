@@ -1,0 +1,27 @@
+// _contact.scss
+
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .btn {
+    display: inline-block;
+    background: $primary-color;
+    color: $secondary-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

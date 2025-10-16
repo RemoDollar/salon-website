@@ -12,7 +12,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.2rem 1rem;
+    padding: 0.25rem 1rem;
     
     .logo {
     display: flex;
@@ -20,13 +20,11 @@ header {
     gap: 10px;
     
     img {
-        width: 120px;
+        width: 110px;
         height: auto;
         background: transparent;
         border-radius: 8px;
         mix-blend-mode: multiply;
-        //filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
-        //border: 1px solid #d4af37; // gold accent border
         padding: 4px;
 }
 

@@ -5,44 +5,14 @@
 @import 'gallery';    // gallery section
 @import 'contact';    // contact section
 
-@media (max-width: 768px) {
- .navbar {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.4rem 0.5rem; // slightly more top space
-  }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-top: 0.5rem;
-  }
-
-  .nav-links li a {
-    font-size: 0.95rem;
-    padding: 0.4rem;
-  }
-
-  .logo img {
-    width: 75px;
-  }
-
-  .hero {
-    padding: 60px 10px;
-  }
-
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 2rem 1rem;
-  }
-
-  body {
-  padding-top: 66px; // Adjust if your header is taller
+.menu-toggle {
+  display: none;  // hide by default
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #222;
 }
 
-}
+
+
 

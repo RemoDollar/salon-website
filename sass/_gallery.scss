@@ -1,20 +1,118 @@
 .gallery {
-  text-align: center;
-  padding: 60px 20px;
+  padding: 4rem 2rem;
+  background: #fff;
 
-  .gallery-grid {
+  .gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .gallery-title {
+    flex: 1;
+
+    h3 {
+      font-size: 1rem;
+      color: $primary-color; // your gold color variable
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #222;
+      margin: 0;
+    }
+  }
+
+  .gallery-description {
+    flex: 1.2;
+    max-width: 600px;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+  }
+
+  .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     img {
       width: 100%;
-      border-radius: 10px;
+      height: 100%;
+      object-fit: cover;
       transition: transform 0.3s ease;
+    }
 
-      &:hover {
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+      img {
         transform: scale(1.05);
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-header {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .gallery-description {
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .gallery-video {
+    margin-top: 3rem;
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  /* Optional: ensure it scales beautifully on large screens */
+  @media (min-width: 1200px) {
+    .gallery-video .video-wrapper video {
+      height: 80vh; /* keeps height proportional */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-video .video-wrapper video {
+      height: auto;
     }
   }
 }

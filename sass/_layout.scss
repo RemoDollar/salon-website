@@ -1,125 +1,117 @@
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.25rem 1rem;
-    
+
     .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    
-    img {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
         width: 110px;
         height: auto;
         background: transparent;
         border-radius: 8px;
         mix-blend-mode: multiply;
         padding: 4px;
-}
-
-
-        
+      }
     }
 
     span {
-        font-size: 1rem;
-        color: #222;
-        font-weight: bold;
+      font-size: 1rem;
+      color: #222;
+      font-weight: bold;
     }
-   }
-
-   .nav-links li a {
-  position: relative;
-  color: #222; 
-  font-weight: 600;
-  padding: 0.5rem 0.8rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $primary-color;
   }
 
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: $primary-color;
-    transition: width 0.3s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
-
-
-  .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  list-style: none;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-
-  li a {
+  .nav-links li a {
+    position: relative;
     color: #222;
-  }
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 
- .menu-toggle {
-  display: none; 
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #222;
-}
-}
+    &:hover {
+      color: $primary-color;
+    }
 
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $primary-color;
+      transition: width 0.3s ease;
+    }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background: #fff;
-    padding: 1.2rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
 
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
+    li a {
+      color: #222;
+    }
 
-    &.active {
-      max-height: 300px;
-      opacity: 1;
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #222;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      flex-direction: column;
+      background: #fff;
+      padding: 1.2rem 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+
+      &.active {
+        max-height: 300px;
+        opacity: 1;
+      }
     }
   }
 }
-
-  }
-
 
 .hero {
-  background: url('../../images/hero-bg.jpeg') center/cover no-repeat;
+  background: url("../../images/hero-bg.jpeg") center/cover no-repeat;
   color: $light-color;
   text-align: center;
   padding: 280px 60px;
@@ -170,9 +162,35 @@ header {
     }
   }
 
+  .business-hours {
+    text-align: right;
+
+    p {
+      color: #ddd;
+      font-size: 0.95rem;
+      line-height: 1.4;
+
+      strong {
+        color: $primary-color; // gold accent
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .business-hours {
+      text-align: center;
+    }
+  }
+
   .copyright {
     font-size: 0.9rem;
     color: #aaa;
   }
 }
-
